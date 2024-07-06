@@ -94,7 +94,38 @@ sudo yum -y install maven
 ```
 - instantiate maven project
 ```
-mvn archetype:generate -DgroupId=com.theijink -DartefactId=Sandbox -DarchetypeArtefactId=maven-archetype-quickstart -DinteractiveMode=false
+mvn archetype:generate -DgroupId=com.theijink -DartifactId=SandboxSetupJenkins -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-archetype -DarchetypeVersion=1.4
 ```
 
+
+## configure Jenkins job
+- create Job
+- GitHub project url -> set correct
+- Source Code Management -> Git -> set repository url correct and branches to build
+- Build Steps -> Invoke top-level Maven targets -> version default, goals clean install
+
+
+## maven project add tests
+```bash
+Archetype
+|- pom.xml
+|- src
+|   |- main
+|   |   |- java
+|   |   |   |- com
+|   |   |   |   |-theijink
+|   |   |   |   |   |-App.java
+|   |- test
+|   |   |- java
+|   |   |   |- com 
+|   |   |   |   |- theijink
+|   |   |   |   |   |- CucumberSpringConfiguration.java
+|   |   |   |   |   |- GreetingStepDefinition.java
+|   |   |   |   |   |- RunCucumberTest.java
+|   |   |- resources
+|   |   |   |- cucumber.properties
+|   |   |   |- cucumber.xml
+|   |   |   |- features
+|   |   |   |   |- greeting.feature
+```
 
