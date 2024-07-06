@@ -7,6 +7,6 @@ import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.test.context.ContextConfiguration;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/features", plugin = {"pretty"}, glue = "com.theijink")
+@CucumberOptions(features = "src/test/resources/features", plugin = {"pretty", "json:target/cucumber-reports/cucumber.json"}, glue = "com.theijink")
 public class RunCucumberTest {
 }
