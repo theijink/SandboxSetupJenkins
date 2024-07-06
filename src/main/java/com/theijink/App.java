@@ -1,4 +1,4 @@
-package main.java.com.theijink;
+package com.theijink;
 
 
 public class App {

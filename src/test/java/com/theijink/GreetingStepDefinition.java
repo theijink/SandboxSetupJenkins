@@ -1,4 +1,4 @@
-//package test.java.com.theijink;
+package com.theijink;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
