@@ -106,6 +106,26 @@ mvn archetype:generate -DgroupId=com.theijink -DartifactId=SandboxSetupJenkins -
 
 
 ## maven project add tests
-
-
+```bash
+Archetype
+|- pom.xml
+|- src
+|   |- main
+|   |   |- java
+|   |   |   |- com
+|   |   |   |   |-theijink
+|   |   |   |   |   |-App.java
+|   |- test
+|   |   |- java
+|   |   |   |- com 
+|   |   |   |   |- theijink
+|   |   |   |   |   |- CucumberSpringConfiguration.java
+|   |   |   |   |   |- GreetingStepDefinition.java
+|   |   |   |   |   |- RunCucumberTest.java
+|   |   |- resources
+|   |   |   |- cucumber.properties
+|   |   |   |- cucumber.xml
+|   |   |   |- features
+|   |   |   |   |- greeting.feature
+```
 
