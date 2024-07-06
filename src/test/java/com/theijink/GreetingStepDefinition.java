@@ -1,19 +1,21 @@
 package com.theijink;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import static org.junit.Assert.assertEquals;
 
-
 public class GreetingStepDefinition {
 
+    @Autowired
     private App app;
     private String greeting;
 
     @Given("the application is running")
     public void the_application_is_running() {
-        app = new App();
+        // Spring context will inject the App instance
     }
 
     @When("I ask it to say hello")
